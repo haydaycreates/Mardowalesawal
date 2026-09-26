@@ -1,0 +1,254 @@
+[
+  {
+    "id": "q1",
+    "chapter": "Integrals",
+    "year": "CBSE 2023 HOTS",
+    "marks": 6,
+    "question": "Evaluate: $\\int_{0}^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} dx$",
+    "hint": "Apply the property $\\int_{0}^{a} f(x) dx = \\int_{0}^{a} f(a-x) dx$.",
+    "solution": "Let $I = \\int_{0}^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} dx$. By property, $2I = \\pi \\int_{0}^{\\pi} \\frac{\\sin x}{1 + \\cos^2 x} dx$. Substitute $t = \\cos x$. Final answer: $\\frac{\\pi^2}{4}$."
+  },
+  {
+    "id": "q2",
+    "chapter": "Applications of Derivatives",
+    "year": "Sample HOTS (not a verified PYQ)",
+    "marks": 4,
+    "question": "A rectangle is inscribed in a circle of radius $r$. Find the dimensions of the rectangle with maximum area.",
+    "hint": "If the sides are $x$ and $y$, the diagonal is $2r$, so $x^2 + y^2 = 4r^2$. Maximize the area as a function of $x$.",
+    "solution": "The area is $A(x) = x\\sqrt{4r^2 - x^2}$ for $0 < x < 2r$. Differentiating gives $A'(x) = \\frac{4r^2 - 2x^2}{\\sqrt{4r^2 - x^2}}$. Setting $A'(x) = 0$ gives $x = \\sqrt{2}r$ and hence $y = \\sqrt{2}r$. The derivative changes from positive to negative here, so the area is maximum. Thus the rectangle is a square with side $\\sqrt{2}r$ and maximum area $2r^2$."
+  },
+  {
+    "id": "q3",
+    "chapter": "Integrals",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q26(a))",
+    "marks": 3,
+    "question": "Evaluate: $\\int_{0}^{\\pi/2} \\frac{x\\sin x\\cos x}{\\sin^4 x+\\cos^4 x}\\,dx$.",
+    "hint": "Use $\\int_0^a f(x)\\,dx=\\int_0^a f(a-x)\\,dx$ with $a=\\pi/2$, add the two expressions, and then put $t=\\sin^2 x$.",
+    "solution": "1. Apply symmetry. Let the given integral be $I$. Replacing $x$ by $\\pi/2-x$ gives $I=\\int_0^{\\pi/2}\\frac{(\\pi/2-x)\\sin x\\cos x}{\\sin^4 x+\\cos^4 x}\\,dx$.\n\n2. Add the two expressions: $2I=\\frac{\\pi}{2}J$, where $J=\\int_0^{\\pi/2}\\frac{\\sin x\\cos x}{\\sin^4 x+\\cos^4 x}\\,dx$. Thus $I=\\frac{\\pi}{4}J$.\n\n3. Put $t=\\sin^2 x$, so $dt=2\\sin x\\cos x\\,dx$ and the limits become $0$ and $1$. Then $J=\\frac12\\int_0^1\\frac{dt}{t^2+(1-t)^2}=\\int_0^1\\frac{dt}{1+(2t-1)^2}$.\n\n4. Integrate: $J=\\frac12[\\tan^{-1}(2t-1)]_0^1=\\frac{\\pi}{4}$. Hence $\\boxed{I=\\frac{\\pi^2}{16}}$."
+  },
+  {
+    "id": "q4",
+    "chapter": "Integrals",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q31)",
+    "marks": 3,
+    "question": "Find: $\\int \\frac{2x^2+1}{x^2(x^2+4)}\\,dx$.",
+    "hint": "Resolve the integrand as $\\frac{A}{x^2}+\\frac{B}{x^2+4}$, then use the standard inverse-tangent integral.",
+    "solution": "1. Write $\\frac{2x^2+1}{x^2(x^2+4)}=\\frac{A}{x^2}+\\frac{B}{x^2+4}$. Multiplying by $x^2(x^2+4)$ gives $2x^2+1=(A+B)x^2+4A$.\n\n2. Compare coefficients: $4A=1$ and $A+B=2$. Therefore $A=\\frac14$ and $B=\\frac74$.\n\n3. Integrate term by term: $I=\\frac14\\int x^{-2}\\,dx+\\frac74\\int\\frac{dx}{x^2+2^2}$.\n\n4. Using $\\int\\frac{dx}{x^2+a^2}=\\frac1a\\tan^{-1}\\frac{x}{a}+C$, obtain $\\boxed{I=-\\frac{1}{4x}+\\frac78\\tan^{-1}\\left(\\frac{x}{2}\\right)+C}$, on any interval not containing $x=0$."
+  },
+  {
+    "id": "q5",
+    "chapter": "Integrals",
+    "year": "CBSE 2024-25 Official SQP (Q29(a))",
+    "marks": 3,
+    "question": "Evaluate: $\\int\\left(\\frac{1}{\\log x}-\\frac{1}{(\\log x)^2}\\right)\\,dx$, where $x>1$ and $\\log$ denotes the natural logarithm.",
+    "hint": "Integrate $\\int\\frac{dx}{\\log x}$ by parts with $u=\\frac{1}{\\log x}$ and $dv=dx$. Watch for cancellation.",
+    "solution": "1. Split the integral: $I=\\int\\frac{dx}{\\log x}-\\int\\frac{dx}{(\\log x)^2}$.\n\n2. In the first integral, take $u=\\frac{1}{\\log x}$ and $dv=dx$. Then $du=-\\frac{dx}{x(\\log x)^2}$ and $v=x$. Integration by parts gives $\\int\\frac{dx}{\\log x}=\\frac{x}{\\log x}+\\int\\frac{dx}{(\\log x)^2}$.\n\n3. Substitute into $I$. The two remaining integrals cancel, so $\\boxed{I=\\frac{x}{\\log x}+C}$.\n\nCheck: $\\frac{d}{dx}\\left(\\frac{x}{\\log x}\\right)=\\frac{\\log x-1}{(\\log x)^2}=\\frac{1}{\\log x}-\\frac{1}{(\\log x)^2}$."
+  },
+  {
+    "id": "q6",
+    "chapter": "Application of Integrals",
+    "year": "CBSE 2023 PYQ (Outside Delhi Set 1, Q34)",
+    "marks": 5,
+    "question": "Using integration, find the area of the region bounded by the line $y=\\sqrt{3}x$, the curve $y=\\sqrt{4-x^2}$ and the $y$-axis in the first quadrant.",
+    "hint": "Find the intersection in the first quadrant. For vertical strips, integrate upper curve minus lower curve from the $y$-axis to the intersection.",
+    "solution": "1. Identify the curves. The curve $y=\\sqrt{4-x^2}$ is the upper semicircle $x^2+y^2=4$. The line and circle meet where $3x^2=4-x^2$, giving $x=1$ and $y=\\sqrt{3}$ in the first quadrant.\n\n2. Sketch the bounded region with boundary points $(0,0)$, $(0,2)$ and $(1,\\sqrt{3})$. For $0\\le x\\le1$, the circle lies above the line.\n\n3. Set up the area: $A=\\int_0^1\\left(\\sqrt{4-x^2}-\\sqrt{3}x\\right)\\,dx$.\n\n4. Use $\\int\\sqrt{4-x^2}\\,dx=\\frac{x}{2}\\sqrt{4-x^2}+2\\sin^{-1}\\left(\\frac{x}{2}\\right)+C$. Thus $A=\\left[\\frac{x}{2}\\sqrt{4-x^2}+2\\sin^{-1}\\left(\\frac{x}{2}\\right)-\\frac{\\sqrt{3}x^2}{2}\\right]_0^1$.\n\n5. Evaluate: $A=\\frac{\\sqrt{3}}{2}+\\frac{\\pi}{3}-\\frac{\\sqrt{3}}{2}$. Therefore $\\boxed{A=\\frac{\\pi}{3}\\text{ square units}}$."
+  },
+  {
+    "id": "q7",
+    "chapter": "Application of Integrals",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q34)",
+    "marks": 5,
+    "question": "Using integration, find the area of the triangle bounded by the lines $5x-2y-10=0$, $x-y-9=0$ and $3x-4y-6=0$.",
+    "hint": "Find the three intersections and use vertical strips. The upper boundary changes at $x=2$, so split the area into two integrals.",
+    "solution": "1. Express the lines as $y=\\frac52x-5$, $y=x-9$ and $y=\\frac34x-\\frac32$. Solving them in pairs gives the vertices $A=(-\\frac83,-\\frac{35}{3})$, $B=(2,0)$ and $C=(30,21)$.\n\n2. Sketch the triangle. The lower boundary is $y=x-9$ throughout. The upper boundary is $y=\\frac52x-5$ on $[-\\frac83,2]$ and $y=\\frac34x-\\frac32$ on $[2,30]$.\n\n3. Integrate upper minus lower: $A_1=\\int_{-8/3}^{2}\\left(\\frac32x+4\\right)\\,dx$ and $A_2=\\int_2^{30}\\left(\\frac{15}{2}-\\frac{x}{4}\\right)\\,dx$.\n\n4. Evaluate: $A_1=\\left[\\frac34x^2+4x\\right]_{-8/3}^{2}=11-(-\\frac{16}{3})=\\frac{49}{3}$. Also $A_2=\\left[\\frac{15x}{2}-\\frac{x^2}{8}\\right]_2^{30}=\\frac{225}{2}-\\frac{29}{2}=98$.\n\n5. Add the positive areas: $\\boxed{A=A_1+A_2=\\frac{343}{3}\\text{ square units}}$. The part below the $x$-axis is included because the integrands are vertical distances, not signed heights from the axis."
+  },
+  {
+    "id": "q8",
+    "chapter": "Application of Integrals",
+    "year": "CBSE 2024-25 Official SQP (Q32)",
+    "marks": 5,
+    "question": "Draw a rough sketch of $y=20\\cos 2x$ for $\\frac{\\pi}{6}\\le x\\le\\frac{\\pi}{3}$. Using integration, find the area bounded by this curve, the ordinates $x=\\frac{\\pi}{6}$ and $x=\\frac{\\pi}{3}$, and the $x$-axis.",
+    "hint": "The curve crosses the $x$-axis at $x=\\pi/4$. Split there and add the magnitudes of the two integrals; the signed integral alone is not the area.",
+    "solution": "1. For the sketch, mark $(\\frac{\\pi}{6},10)$, $(\\frac{\\pi}{4},0)$ and $(\\frac{\\pi}{3},-10)$. Since $y^{\\prime}=-40\\sin 2x<0$ on this interval, the curve decreases through these points.\n\n2. The curve is above the axis on $[\\frac{\\pi}{6},\\frac{\\pi}{4}]$ and below it on $[\\frac{\\pi}{4},\\frac{\\pi}{3}]$. Hence $A=20\\int_{\\pi/6}^{\\pi/4}\\cos 2x\\,dx-20\\int_{\\pi/4}^{\\pi/3}\\cos 2x\\,dx$.\n\n3. The first area is $A_1=10[\\sin 2x]_{\\pi/6}^{\\pi/4}=10\\left(1-\\frac{\\sqrt{3}}{2}\\right)$.\n\n4. The second area is $A_2=-10[\\sin 2x]_{\\pi/4}^{\\pi/3}=10\\left(1-\\frac{\\sqrt{3}}{2}\\right)$.\n\n5. Therefore $\\boxed{A=20-10\\sqrt{3}\\text{ square units}}$. The signed integral over the whole interval is zero, but the required geometrical area is positive."
+  },
+  {
+    "id": "q9",
+    "chapter": "Differential Equations",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q27(a))",
+    "marks": 3,
+    "question": "Find the particular solution of $\\frac{dy}{dx}=\\frac{xy}{x^2+y^2}$, given that $y=1$ when $x=0$.",
+    "hint": "Use the homogeneous substitution $v=x/y$. To avoid dividing by $x$ at the initial point, calculate $dv/dx$ and then $dy/dv$.",
+    "solution": "1. Near the initial point, $y>0$. Put $v=x/y$, so $\\frac{dy}{dx}=\\frac{v}{1+v^2}$. Differentiating $v=x/y$ gives $\\frac{dv}{dx}=\\frac1y-\\frac{x}{y^2}\\frac{dy}{dx}=\\frac{1}{y(1+v^2)}$.\n\n2. Divide the two derivatives: $\\frac{dy}{dv}=vy$. Separate variables and integrate: $\\int\\frac{dy}{y}=\\int v\\,dv$, giving $\\log y=\\frac{v^2}{2}+C=\\frac{x^2}{2y^2}+C$.\n\n3. Apply $x=0$, $y=1$: $C=0$. Thus the particular solution is $\\boxed{x^2=2y^2\\log y,\\quad y>0}$. This relation implies $y\\ge1$ on the branch through $(0,1)$.\n\nCheck: implicit differentiation gives $2x=2y(2\\log y+1)\\frac{dy}{dx}$. Using $2\\log y=x^2/y^2$ recovers $\\frac{dy}{dx}=\\frac{xy}{x^2+y^2}$, including at the initial point."
+  },
+  {
+    "id": "q10",
+    "chapter": "Differential Equations",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q27(b))",
+    "marks": 3,
+    "question": "Find the particular solution of $(1+x^2)\\frac{dy}{dx}+2xy=\\frac{1}{1+x^2}$, given that $y=0$ when $x=1$.",
+    "hint": "Divide by $1+x^2$ to obtain a linear differential equation. Its integrating factor is $e^{\\int 2x/(1+x^2)\\,dx}$.",
+    "solution": "1. Write the linear form: $\\frac{dy}{dx}+\\frac{2x}{1+x^2}y=\\frac{1}{(1+x^2)^2}$. Here $P(x)=\\frac{2x}{1+x^2}$.\n\n2. The integrating factor is $\\mathrm{IF}=e^{\\int P(x)\\,dx}=e^{\\log(1+x^2)}=1+x^2$. Multiplying gives $\\frac{d}{dx}[(1+x^2)y]=\\frac{1}{1+x^2}$.\n\n3. Integrate: $(1+x^2)y=\\tan^{-1}x+C$. Apply $y(1)=0$ to obtain $0=\\frac{\\pi}{4}+C$, hence $C=-\\frac{\\pi}{4}$.\n\n4. Therefore $\\boxed{y=\\frac{\\tan^{-1}x-\\pi/4}{1+x^2}}$. Since $1+x^2>0$, this solution is defined for every real $x$."
+  },
+  {
+    "id": "q11",
+    "chapter": "Continuity and Differentiability",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q23)",
+    "marks": 2,
+    "question": "Find the value of $k$ for which $f(x)=\\begin{cases}2x+2,&x<2\\\\k,&x=2\\\\3x,&x>2\\end{cases}$ is continuous at $x=2$.",
+    "hint": "Continuity requires the left-hand limit, right-hand limit and $f(2)$ to be equal. Use the appropriate branch on each side of $2$.",
+    "solution": "1. The left-hand limit is $\\lim_{x\\to2^-}f(x)=\\lim_{x\\to2^-}(2x+2)=6$.\n\n2. The right-hand limit is $\\lim_{x\\to2^+}f(x)=\\lim_{x\\to2^+}3x=6$. Thus $\\lim_{x\\to2}f(x)=6$.\n\n3. By definition, $f(2)=k$. Continuity at $2$ requires $f(2)=\\lim_{x\\to2}f(x)$, hence $\\boxed{k=6}$."
+  },
+  {
+    "id": "q12",
+    "chapter": "Continuity and Differentiability",
+    "year": "CBSE 2024-25 Official SQP (Q23(b))",
+    "marks": 2,
+    "question": "Differentiate $y=(\\cos x)^x$ with respect to $x$, where $0<x<\\frac{\\pi}{2}$.",
+    "hint": "Both the base and the exponent depend on $x$. Take natural logarithms first, then differentiate using the product rule.",
+    "solution": "1. Since $\\cos x>0$ on the given interval, take natural logarithms: $\\log y=x\\log(\\cos x)$.\n\n2. Differentiate implicitly: $\\frac{1}{y}\\frac{dy}{dx}=\\log(\\cos x)+x\\frac{-\\sin x}{\\cos x}=\\log(\\cos x)-x\\tan x$.\n\n3. Substitute $y=(\\cos x)^x$: $\\boxed{\\frac{dy}{dx}=(\\cos x)^x[\\log(\\cos x)-x\\tan x]}$, where $\\log$ denotes the natural logarithm."
+  },
+  {
+    "id": "q13",
+    "chapter": "Continuity and Differentiability",
+    "year": "CBSE 2024-25 Official SQP (Q34(a))",
+    "marks": 5,
+    "question": "If $f:\\mathbb{R}\\to\\mathbb{R}$ is defined by $f(x)=|x|^3$, show that $f^{\\prime\\prime}(x)$ exists for every real $x$ and find it.",
+    "hint": "Write $f$ separately for positive and negative $x$. At $x=0$, use the definition of the derivative twice rather than assuming the branch formulas apply.",
+    "solution": "1. Write $f(x)=\\begin{cases}x^3,&x\\ge0\\\\-x^3,&x<0\\end{cases}$. For $x>0$, $f^{\\prime}(x)=3x^2$; for $x<0$, $f^{\\prime}(x)=-3x^2$.\n\n2. At zero, $\\frac{f(h)-f(0)}{h}=\\frac{|h|^3}{h}$. This equals $h^2$ for $h>0$ and $-h^2$ for $h<0$. Both limits are zero, so $f^{\\prime}(0)=0$. Thus $f^{\\prime}(x)=3x|x|$ for all real $x$.\n\n3. Away from zero, differentiate again: $f^{\\prime\\prime}(x)=6x$ for $x>0$, and $f^{\\prime\\prime}(x)=-6x$ for $x<0$.\n\n4. At zero, $f^{\\prime\\prime}(0)=\\lim_{h\\to0}\\frac{f^{\\prime}(h)-f^{\\prime}(0)}{h}=\\lim_{h\\to0}\\frac{3h|h|}{h}=\\lim_{h\\to0}3|h|=0$.\n\n5. Hence the second derivative exists everywhere and $\\boxed{f^{\\prime\\prime}(x)=6|x|,\\quad x\\in\\mathbb{R}}$."
+  },
+  {
+    "id": "q14",
+    "chapter": "Continuity and Differentiability",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q14; MCQ stem)",
+    "marks": 1,
+    "question": "If $(\\cos x)^y=(\\cos y)^x$, find $\\frac{dy}{dx}$.",
+    "hint": "Take natural logarithms on a real branch with positive cosine bases. Apply the product rule on both sides and collect the terms containing $dy/dx$.",
+    "solution": "1. On a branch where $\\cos x>0$ and $\\cos y>0$, take natural logarithms: $y\\log(\\cos x)=x\\log(\\cos y)$.\n\n2. Differentiating with respect to $x$ gives $\\frac{dy}{dx}\\log(\\cos x)-y\\tan x=\\log(\\cos y)-x\\tan y\\frac{dy}{dx}$.\n\n3. Collect the derivative terms: $[\\log(\\cos x)+x\\tan y]\\frac{dy}{dx}=y\\tan x+\\log(\\cos y)$.\n\n4. Therefore $\\boxed{\\frac{dy}{dx}=\\frac{y\\tan x+\\log(\\cos y)}{x\\tan y+\\log(\\cos x)}}$, wherever the denominator is nonzero. This is option (d) in the original MCQ; $\\log$ is the natural logarithm."
+  },
+  {
+    "id": "q15",
+    "chapter": "Applications of Derivatives",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q24)",
+    "marks": 2,
+    "question": "Find the intervals in which $f(x)=x^4-4x^3+4x^2+15$ is strictly increasing.",
+    "hint": "Factor $f^{\\prime}(x)$ completely and check its sign in the intervals determined by its three zeros.",
+    "solution": "1. Differentiate and factor: $f^{\\prime}(x)=4x^3-12x^2+8x=4x(x-1)(x-2)$. The stationary points occur at $x=0,1,2$.\n\n2. Check signs. On $(-\\infty,0)$ the derivative is negative; on $(0,1)$ it is positive; on $(1,2)$ it is negative; on $(2,\\infty)$ it is positive.\n\n3. Therefore the intervals on which $f^{\\prime}(x)>0$ are $\\boxed{(0,1)\\text{ and }(2,\\infty)}$, so $f$ is strictly increasing on each. The stationary endpoints can also be included: the maximal increasing intervals are $[0,1]$ and $[2,\\infty)$."
+  },
+  {
+    "id": "q16",
+    "chapter": "Applications of Derivatives",
+    "year": "CBSE 2024-25 Official SQP (Q26)",
+    "marks": 3,
+    "question": "A kite is flying at a height of $3$ metres and $5$ metres of string is out. If it is moving away horizontally at $200\\text{ cm/s}$, find the rate at which the string is being released.",
+    "hint": "Let $x$ be the horizontal distance and $s$ the length of the taut string. Use $s^2=x^2+3^2$, differentiate with respect to time, and keep the units consistent.",
+    "solution": "1. Taking the height as constant and the string as straight, let $x$ and $s$ be measured in metres. The right triangle gives $s^2=x^2+9$. When $s=5$, $x=\\sqrt{25-9}=4$ metres.\n\n2. Convert the given speed: $\\frac{dx}{dt}=200\\text{ cm/s}=2\\text{ m/s}$. Differentiate the constraint: $2s\\frac{ds}{dt}=2x\\frac{dx}{dt}$.\n\n3. Substitute the instantaneous values: $\\frac{ds}{dt}=\\frac{x}{s}\\frac{dx}{dt}=\\frac45\\cdot2=\\frac85\\text{ m/s}$. Hence the string is released at $\\boxed{160\\text{ cm/s}}$."
+  },
+  {
+    "id": "q17",
+    "chapter": "Applications of Derivatives",
+    "year": "CBSE 2024-25 Official SQP (Q27)",
+    "marks": 3,
+    "question": "According to a psychologist, a person's ability to understand spatial concepts is $A(t)=\\frac13\\sqrt{t}$, where $t\\in[5,18]$ is the age in years. Show that the rate of increase of this ability decreases with age between $5$ and $18$.",
+    "hint": "The ability is $A(t)$, but its rate of increase is $A^{\\prime}(t)$. To show that the rate decreases, determine the sign of $A^{\\prime\\prime}(t)$.",
+    "solution": "1. Differentiate the ability function: $A^{\\prime}(t)=\\frac16t^{-1/2}=\\frac{1}{6\\sqrt{t}}$. This is positive for $5<t<18$, so ability increases with age.\n\n2. Differentiate the rate: $A^{\\prime\\prime}(t)=-\\frac{1}{12}t^{-3/2}=-\\frac{1}{12t\\sqrt{t}}$.\n\n3. Since $t>0$, $\\boxed{A^{\\prime\\prime}(t)<0\\text{ for }5<t<18}$. Thus $A^{\\prime}(t)$ is strictly decreasing on this interval: ability increases, but at a decreasing rate."
+  },
+  {
+    "id": "q18",
+    "chapter": "Applications of Derivatives",
+    "year": "CBSE 2024-25 Official SQP (Q36(i), (ii), (iii)(a))",
+    "marks": 4,
+    "question": "Ramesh uses a rectangular cardboard sheet measuring $25\\text{ cm}\\times40\\text{ cm}$ to make an open-top container. Squares of side $x\\text{ cm}$ are cut from each corner and the flaps are folded up. (i) Express its volume $V$ as a function of $x$. (ii) Find $\\frac{dV}{dx}$. (iii) Find the value of $x$ for which the volume is maximum.",
+    "hint": "The height is $x$, and the base dimensions are $25-2x$ and $40-2x$. Restrict $x$ to the physically possible interval before choosing a stationary point.",
+    "solution": "1. The box has volume $V(x)=x(25-2x)(40-2x)$. Positive dimensions require $0<x<\\frac{25}{2}$. Therefore $\\boxed{V(x)=1000x-130x^2+4x^3\\text{ cm}^3}$.\n\n2. Differentiate: $\\boxed{\\frac{dV}{dx}=1000-260x+12x^2}$.\n\n3. Set the derivative to zero: $12x^2-260x+1000=4(x-5)(3x-50)=0$. The candidates are $x=5$ and $x=\\frac{50}{3}$. Only $x=5$ belongs to the physical domain.\n\n4. Since $V^{\\prime\\prime}(x)=24x-260$, $V^{\\prime\\prime}(5)=-140<0$. Also $V^{\\prime}>0$ on $(0,5)$ and $V^{\\prime}<0$ on $(5,\\frac{25}{2})$, so this is the absolute maximum on the physical domain.\n\n5. Hence $\\boxed{x=5\\text{ cm}}$. The resulting box is $15\\text{ cm}\\times30\\text{ cm}\\times5\\text{ cm}$, with maximum volume $2250\\text{ cm}^3$."
+  },
+  {
+    "id": "q19",
+    "chapter": "Matrices",
+    "year": "CBSE 2023 Compartment PYQ (65/C/1, Q32)",
+    "marks": 5,
+    "question": "If $A=\\begin{bmatrix}3&2&1\\\\4&1&3\\\\1&1&1\\end{bmatrix}$, find $A^{-1}$ and hence solve $3x+2y+z=2000$, $4x+y+3z=2500$ and $x+y+z=900$.",
+    "hint": "Find $\\det A$ and the cofactor matrix, transpose the latter to obtain $\\operatorname{adj}A$, and use $X=A^{-1}B$.",
+    "solution": "1. Expand along the first row: $\\det A=3(1-3)-2(4-3)+(4-1)=-6-2+3=-5\\ne0$. Thus $A$ is invertible.\n\n2. Using $C_{ij}=(-1)^{i+j}M_{ij}$, the cofactor matrix is $C=\\begin{bmatrix}-2&-1&3\\\\-1&2&-1\\\\5&-5&-5\\end{bmatrix}$. Transposing gives $\\operatorname{adj}A=\\begin{bmatrix}-2&-1&5\\\\-1&2&-5\\\\3&-1&-5\\end{bmatrix}$.\n\n3. Therefore $\\boxed{A^{-1}=\\frac15\\begin{bmatrix}2&1&-5\\\\1&-2&5\\\\-3&1&5\\end{bmatrix}}$.\n\n4. Write the system as $AX=B$, where $X=\\begin{bmatrix}x\\\\y\\\\z\\end{bmatrix}$ and $B=\\begin{bmatrix}2000\\\\2500\\\\900\\end{bmatrix}$. Then $X=A^{-1}B=\\frac15\\begin{bmatrix}4000+2500-4500\\\\2000-5000+4500\\\\-6000+2500+4500\\end{bmatrix}=\\begin{bmatrix}400\\\\300\\\\200\\end{bmatrix}$.\n\n5. Hence $\\boxed{x=400,\\quad y=300,\\quad z=200}$. Check: $1200+600+200=2000$, $1600+300+600=2500$ and $400+300+200=900$."
+  },
+  {
+    "id": "q20",
+    "chapter": "Matrices",
+    "year": "CBSE 2024-25 Official SQP (Q33)",
+    "marks": 5,
+    "question": "The path of a ball headed by a footballer is $y=ax^2+bx+c$, where $0\\le x\\le14$ and $a\\ne0$. It passes through $(2,15)$, $(4,25)$ and $(14,15)$. Use the matrix method to determine $a,b,c$ and hence the equation of the path.",
+    "hint": "Substitute each point to form three simultaneous linear equations. Arrange the coefficients of $a,b,c$ into a matrix and solve using its inverse.",
+    "solution": "1. Substitution gives $4a+2b+c=15$, $16a+4b+c=25$ and $196a+14b+c=15$. Write $MX=B$, with $M=\\begin{bmatrix}4&2&1\\\\16&4&1\\\\196&14&1\\end{bmatrix}$, $X=\\begin{bmatrix}a\\\\b\\\\c\\end{bmatrix}$ and $B=\\begin{bmatrix}15\\\\25\\\\15\\end{bmatrix}$.\n\n2. Expand the determinant: $\\det M=4(4-14)-2(16-196)+(224-784)=-240\\ne0$. The cofactor matrix is $C=\\begin{bmatrix}-10&180&-560\\\\12&-192&336\\\\-2&12&-16\\end{bmatrix}$.\n\n3. Thus $M^{-1}=\\frac{1}{\\det M}C^T=-\\frac1{240}\\begin{bmatrix}-10&12&-2\\\\180&-192&12\\\\-560&336&-16\\end{bmatrix}$.\n\n4. Multiply: $X=M^{-1}B=-\\frac1{240}\\begin{bmatrix}-150+300-30\\\\2700-4800+180\\\\-8400+8400-240\\end{bmatrix}=-\\frac1{240}\\begin{bmatrix}120\\\\-1920\\\\-240\\end{bmatrix}$. Therefore $\\boxed{a=-\\frac12,\\quad b=8,\\quad c=1}$.\n\n5. The path is $\\boxed{y=-\\frac12x^2+8x+1,\\quad0\\le x\\le14}$. Substituting $x=2,4,14$ gives $y=15,25,15$, respectively."
+  },
+  {
+    "id": "q21",
+    "chapter": "Determinants",
+    "year": "CBSE 2023-24 Official SQP (Q13; MCQ stem)",
+    "marks": 1,
+    "question": "Given a square matrix $A$ of order $3$ with $\\det A=-2$, find $\\det(\\operatorname{adj}(2A))$.",
+    "hint": "Apply the order-dependent identities $\\det(kA)=k^n\\det A$ and $\\det(\\operatorname{adj}B)=(\\det B)^{n-1}$. Do not treat scaling a matrix as scaling just one row.",
+    "solution": "1. Since $A$ is of order $3$, multiplying the whole matrix by $2$ scales all three rows: $\\det(2A)=2^3\\det A=8(-2)=-16$.\n\n2. For a square matrix $B$ of order $3$, $\\det(\\operatorname{adj}B)=(\\det B)^2$. Apply this to $B=2A$.\n\n3. Hence $\\boxed{\\det(\\operatorname{adj}(2A))=(-16)^2=256=2^8}$. This is option (d) in the original MCQ."
+  },
+  {
+    "id": "q22",
+    "chapter": "Determinants",
+    "year": "CBSE 2023-24 Official SQP (Q10; MCQ stem)",
+    "marks": 1,
+    "question": "Find $\\det A$ if $A=\\begin{bmatrix}0&2x-1&\\sqrt{x}\\\\1-2x&0&2\\sqrt{x}\\\\-\\sqrt{x}&-2\\sqrt{x}&0\\end{bmatrix}$, where $x>0$.",
+    "hint": "Check whether $A^T=-A$. A real skew-symmetric matrix of odd order has zero determinant; derive this using the transpose and scalar-multiple properties.",
+    "solution": "1. The diagonal entries are zero, and each off-diagonal entry is the negative of its transposed entry. Thus $A^T=-A$.\n\n2. The determinant is unchanged by transposition: $\\det(A^T)=\\det A$. Since $A$ has order $3$, $\\det(-A)=(-1)^3\\det A=-\\det A$.\n\n3. Combining these identities gives $\\det A=-\\det A$, so $2\\det A=0$. Therefore $\\boxed{\\det A=0}$ for every $x>0$. This is option (b) in the original MCQ."
+  },
+  {
+    "id": "q23",
+    "chapter": "Probability",
+    "year": "CBSE 2024-25 Official SQP (Q38)",
+    "marks": 4,
+    "question": "Arka has two cages: Cage I contains $5$ parrots and $1$ owl, and Cage II contains $6$ parrots. Two birds fly simultaneously from Cage I to Cage II, and then two birds fly simultaneously back from Cage II to Cage I. Assume the birds are selected at random at each stage, with all pairs equally likely. (i) Find the probability that the owl is in Cage I after both transfers. (ii) Given that the owl is in Cage I at the end, find the probability that one parrot and the owl made the first transfer.",
+    "hint": "Partition the first transfer into two cases: the owl moves, or two parrots move. Cage II then has $8$ birds. Use total probability for the owl's final location and Bayes' theorem to infer its first move.",
+    "solution": "1. Define $E_1$ as the first pair consisting of the owl and a parrot, $E_2$ as the first pair consisting of two parrots, and $A$ as the owl being in Cage I after both transfers. Then $P(E_1)=\\frac{\\binom51\\binom11}{\\binom62}=\\frac13$ and $P(E_2)=\\frac{\\binom52}{\\binom62}=\\frac23$. These events partition the first transfer.\n\n2. If $E_1$ occurs, Cage II contains $7$ parrots and the owl. The owl returns exactly when the returning pair includes it, so $P(A\\mid E_1)=\\frac{\\binom71\\binom11}{\\binom82}=\\frac7{28}=\\frac14$. If $E_2$ occurs, the owl never leaves Cage I, so $P(A\\mid E_2)=1$.\n\n3. By the theorem of total probability, $P(A)=P(E_1)P(A\\mid E_1)+P(E_2)P(A\\mid E_2)=\\frac13\\cdot\\frac14+\\frac23\\cdot1$. Thus the answer to (i) is $\\boxed{P(A)=\\frac34}$.\n\n4. For (ii), apply Bayes' theorem: $P(E_1\\mid A)=\\frac{P(E_1)P(A\\mid E_1)}{P(A)}=\\frac{(1/3)(1/4)}{3/4}$. Therefore $\\boxed{P(E_1\\mid A)=\\frac19}$. The fact that the owl is back in Cage I does not imply that it never left."
+  },
+  {
+    "id": "q24",
+    "chapter": "Probability",
+    "year": "CBSE 2023-24 Official SQP (Q36(i), (ii), (iii) main choice)",
+    "marks": 4,
+    "question": "In an office, Jayant processes $50\\%$ of incoming forms, Sonia processes $20\\%$, and Oliver processes the remaining $30\\%$. Their respective error rates are $0.06$, $0.04$ and $0.03$. A form is selected at random from the processed output. (i) Find the probability that Sonia processed it and committed an error. (ii) Find the total probability that it contains an error. (iii) Given that it contains an error, find the probability that it was not processed by Jayant.",
+    "hint": "Distinguish $P(S\\cap E)$ from $P(S\\mid E)$. Weight each employee's error rate by their share of forms, then condition on the event that an error occurred.",
+    "solution": "1. Let $J,S,O$ identify the employee who processed the form and let $E$ denote an error. Then $P(J)=\\frac12$, $P(S)=\\frac15$, $P(O)=\\frac3{10}$, while $P(E\\mid J)=\\frac3{50}$, $P(E\\mid S)=\\frac1{25}$ and $P(E\\mid O)=\\frac3{100}$. The employee events are mutually exclusive and exhaustive.\n\n2. For (i), use the multiplication rule: $P(S\\cap E)=P(S)P(E\\mid S)=\\frac15\\cdot\\frac1{25}$. Hence $\\boxed{P(S\\cap E)=\\frac1{125}=0.008}$.\n\n3. For (ii), total probability gives $P(E)=P(J)P(E\\mid J)+P(S)P(E\\mid S)+P(O)P(E\\mid O)=0.5(0.06)+0.2(0.04)+0.3(0.03)$. Thus $\\boxed{P(E)=0.047=\\frac{47}{1000}}$.\n\n4. For (iii), the error must have been made by Sonia or Oliver. Since those events are disjoint, $P(J^c\\cap E)=0.008+0.009=0.017$. Using conditional probability (equivalently, adding the two Bayes posteriors), $\\boxed{P(J^c\\mid E)=\\frac{0.017}{0.047}=\\frac{17}{47}}$."
+  },
+  {
+    "id": "q25",
+    "chapter": "Relations and Functions",
+    "year": "CBSE 2023-24 Official SQP (Q33, main choice)",
+    "marks": 5,
+    "question": "Let $\\mathbb{N}=\\{1,2,3,\\ldots\\}$. Define a relation $R$ on $\\mathbb{N}\\times\\mathbb{N}$ by $(a,b)R(c,d)$ if and only if $ad=bc$. Show that $R$ is an equivalence relation and find the equivalence class $[(2,6)]$.",
+    "hint": "Prove reflexivity, symmetry and transitivity separately. In the transitivity proof, all coordinates are positive, so cancellation is valid. For the class, solve $(a,b)R(2,6)$.",
+    "solution": "1. Reflexivity: for every $(a,b)\\in\\mathbb{N}\\times\\mathbb{N}$, $ab=ba$. Hence $(a,b)R(a,b)$ and $R$ is reflexive.\n\n2. Symmetry: if $(a,b)R(c,d)$, then $ad=bc$. Reversing this equality gives $cb=da$, which is exactly the condition for $(c,d)R(a,b)$. Thus $R$ is symmetric.\n\n3. Transitivity: suppose $(a,b)R(c,d)$ and $(c,d)R(e,f)$. Then $ad=bc$ and $cf=de$. Multiply the first equation by $f$: $adf=bcf=bde$. Since $d\\in\\mathbb{N}$ and $d\\ne0$, cancellation gives $af=be$. Therefore $(a,b)R(e,f)$ and $R$ is transitive.\n\n4. Since all three properties hold, $\\boxed{R\\text{ is an equivalence relation}}$.\n\n5. The class $[(2,6)]$ consists of all positive integer pairs $(a,b)$ satisfying $6a=2b$, or $b=3a$. Hence $\\boxed{[(2,6)]=\\{(n,3n):n\\in\\mathbb{N}\\}}=\\{(1,3),(2,6),(3,9),\\ldots\\}$."
+  },
+  {
+    "id": "q26",
+    "chapter": "Relations and Functions",
+    "year": "CBSE 2023-24 Official SQP (Q33, OR choice)",
+    "marks": 5,
+    "question": "Show that $f:\\mathbb{R}\\to(-1,1)$, defined by $f(x)=\\frac{x}{1+|x|}$, is one-one and onto.",
+    "hint": "First check that the values really lie in $(-1,1)$. Equal outputs must have inputs of the same sign; use the appropriate absolute-value branch. For onto, solve $y=x/(1+|x|)$ for an arbitrary $-1<y<1$.",
+    "solution": "1. Check the codomain: $|f(x)|=\\frac{|x|}{1+|x|}<1$ for every real $x$. Thus $f$ is well-defined as a map into $(-1,1)$. Also, $f(x)$ has the same sign as $x$, and $f(x)=0$ only when $x=0$.\n\n2. Prove one-one. Suppose $f(a)=f(b)$. If this common value is zero, $a=b=0$. Otherwise $a,b$ have the same sign. If both are positive, $\\frac{a}{1+a}=\\frac{b}{1+b}$ implies $a+ab=b+ab$, hence $a=b$. If both are negative, $\\frac{a}{1-a}=\\frac{b}{1-b}$ implies $a-ab=b-ab$, again giving $a=b$. Therefore $f$ is one-one.\n\n3. Prove onto. Take any $y\\in(-1,1)$ and choose $x=\\frac{y}{1-|y|}$. The denominator is positive, so $x$ is real and $|x|=\\frac{|y|}{1-|y|}$.\n\n4. Substitution gives $f(x)=\\frac{y/(1-|y|)}{1+|y|/(1-|y|)}=y$. Thus every element of the codomain has a preimage and $f$ is onto.\n\n5. Consequently $\\boxed{f\\text{ is bijective}}$. The construction also gives the inverse $f^{-1}(y)=\\frac{y}{1-|y|}$ for $-1<y<1$. The endpoints $\\pm1$ are not in the codomain."
+  },
+  {
+    "id": "q27",
+    "chapter": "Three Dimensional Geometry",
+    "year": "CBSE 2024-25 Official SQP (Q35(a))",
+    "marks": 5,
+    "question": "Find the shortest distance between the lines $l_1:\\vec r=(-\\hat i-\\hat j-\\hat k)+\\lambda(7\\hat i-6\\hat j+\\hat k)$ and $l_2:\\vec r=(3\\hat i+5\\hat j+7\\hat k)+\\mu(\\hat i-2\\hat j+\\hat k)$, where $\\lambda,\\mu\\in\\mathbb{R}$.",
+    "hint": "For non-parallel lines $\\vec r=\\vec a_1+\\lambda\\vec b_1$ and $\\vec r=\\vec a_2+\\mu\\vec b_2$, use the scalar-triple-product formula $d=\\frac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$.",
+    "solution": "1. Read off $\\vec a_1=(-1,-1,-1)$, $\\vec a_2=(3,5,7)$, $\\vec b_1=(7,-6,1)$ and $\\vec b_2=(1,-2,1)$. Then $\\vec a_2-\\vec a_1=(4,6,8)$.\n\n2. Compute $\\vec b_1\\times\\vec b_2=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\7&-6&1\\\\1&-2&1\\end{vmatrix}=-4\\hat i-6\\hat j-8\\hat k$. Its magnitude is $\\sqrt{16+36+64}=2\\sqrt{29}\\ne0$, so the lines are not parallel.\n\n3. The scalar triple product is $(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)=4(-4)+6(-6)+8(-8)=-116\\ne0$. Hence the lines are non-coplanar, so they are skew.\n\n4. Their shortest distance is $d=\\frac{|-116|}{2\\sqrt{29}}=\\boxed{2\\sqrt{29}\\text{ units}}$.\n\n5. Check geometrically: $\\vec a_2-\\vec a_1$ is perpendicular to both direction vectors because $28-36+8=0$ and $4-12+8=0$. Thus the points at $\\lambda=\\mu=0$ are the endpoints of the common perpendicular, whose length is $\\sqrt{4^2+6^2+8^2}=2\\sqrt{29}$."
+  },
+  {
+    "id": "q28",
+    "chapter": "Three Dimensional Geometry",
+    "year": "CBSE 2024-25 Official SQP (Q35(b))",
+    "marks": 5,
+    "question": "Find the image of $P=(1,2,1)$ with respect to the line $\\frac{x-3}{1}=\\frac{y+1}{2}=\\frac{z-1}{3}$. Also find the equation of the line joining $P$ and its image.",
+    "hint": "Let the perpendicular foot be $H=(3+t,-1+2t,1+3t)$. Impose $(H-P)\\cdot(1,2,3)=0$. The image $Q$ satisfies $Q=2H-P$, because $H$ is the midpoint of $PQ$.",
+    "solution": "1. A general point on the given line is $H=(3+t,-1+2t,1+3t)$. The vector from $P$ to $H$ is $\\overrightarrow{PH}=(2+t,-3+2t,3t)$, while the line has direction vector $(1,2,3)$.\n\n2. For $H$ to be the foot of the perpendicular, $(2+t)+2(-3+2t)+3(3t)=0$. Thus $14t-4=0$, giving $t=\\frac27$.\n\n3. Substitute to obtain the perpendicular foot $\\boxed{H=\\left(\\frac{23}{7},-\\frac37,\\frac{13}{7}\\right)}$. Reflection in the line places the image $Q$ on the opposite side of $H$, at the same distance from $H$.\n\n4. Hence $Q=2H-P=\\left(\\frac{46}{7}-1,-\\frac67-2,\\frac{26}{7}-1\\right)$. Therefore the image is $\\boxed{Q=\\left(\\frac{39}{7},-\\frac{20}{7},\\frac{19}{7}\\right)}$.\n\n5. The joining direction is $\\overrightarrow{PQ}=\\left(\\frac{32}{7},-\\frac{34}{7},\\frac{12}{7}\\right)=\\frac27(16,-17,6)$. Thus the required line is $\\boxed{\\frac{x-1}{16}=\\frac{y-2}{-17}=\\frac{z-1}{6}}$. Its direction is perpendicular to the reflecting line, since $16-34+18=0$."
+  }
+]
