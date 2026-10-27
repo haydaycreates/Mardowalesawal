@@ -37,24 +37,28 @@ export default function App() {
           </div>
           <div className="bank-count"><strong>{questions.length.toString().padStart(2, "0")}</strong><span>QUESTIONS</span></div>
         </section>
-        <QuestionFilters chapter={chapter} search={search} onChapterChange={setChapter} onSearchChange={setSearch} />
-        <section className="question-list" aria-label="Questions">
-          <div className="results-heading">
-            <p role="status">Showing <strong>{filtered.length}</strong> of {questions.length} questions</p>
-            {isFiltered ? <button type="button" className="reset-button" onClick={resetFilters}>Reset filters</button>
-              : <span className="practice-tip">Try it yourself before revealing the answer.</span>}
-          </div>
-          {filtered.length ? filtered.map((question) => (
-            <QuestionCard key={question.id} question={question} number={questions.indexOf(question) + 1} />
-          )) : (
-            <div className="empty-state">
-              <SearchX size={30} strokeWidth={1.5} aria-hidden="true" />
-              <h3>No questions found</h3>
-              <p>Try a different search or chapter.</p>
-              <button type="button" className="chapter-pill" onClick={resetFilters}>Show all questions</button>
+        <div className="bank-layout">
+          <aside className="bank-sidebar">
+            <QuestionFilters chapter={chapter} search={search} onChapterChange={setChapter} onSearchChange={setSearch} />
+          </aside>
+          <section className="bank-content question-list" aria-label="Questions">
+            <div className="results-heading">
+              <p role="status">Showing <strong>{filtered.length}</strong> of {questions.length} questions</p>
+              {isFiltered ? <button type="button" className="reset-button" onClick={resetFilters}>Reset filters</button>
+                : <span className="practice-tip">Try it yourself before revealing the answer.</span>}
             </div>
-          )}
-        </section>
+            {filtered.length ? filtered.map((question) => (
+              <QuestionCard key={question.id} question={question} number={questions.indexOf(question) + 1} />
+            )) : (
+              <div className="empty-state">
+                <SearchX size={30} strokeWidth={1.5} aria-hidden="true" />
+                <h3>No questions found</h3>
+                <p>Try a different search or chapter.</p>
+                <button type="button" className="chapter-pill" onClick={resetFilters}>Show all questions</button>
+              </div>
+            )}
+          </section>
+        </div>
       </main>
       <footer className="site-footer"><span>One question at a time.</span><span>UNDERSTAND. PRACTISE. REPEAT.</span></footer>
     </div>
